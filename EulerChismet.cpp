@@ -1,4 +1,4 @@
-#include "GaussCalc.h"
+#include "EulerCalc.h"
 using std::vector;
 using std::pair;
 using std::cout;

@@ -1,4 +1,4 @@
-#include "GaussCalc.h"
+#include "EulerCalc.h"
 
 double f(double x, double y)
 {
