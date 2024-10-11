@@ -2,7 +2,7 @@
 using std::vector;
 using std::pair;
 using std::cout;
-using std::endl;
+using std::cin;
 int main()
 {
 	double l = 0, r = 1;
@@ -19,4 +19,20 @@ int main()
 		cout << ", {" << xy[i].first << ", " << xy[i].second << "}";
 	}
 	cout << "}\n";
+	
+	double x, y;
+	
+	vector<pair<double, double> >correct;
+	
+	while(cin >> x >> y)
+	{
+		correct.push_back(make_pair(x, y));
+	}
+	
+	pair<double, double>ans;
+	
+	ans = difference(correct, xy);
+	
+	cout << ans.first << " " << ans.second << "\n";
+		
 }

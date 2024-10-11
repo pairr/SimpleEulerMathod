@@ -1,5 +1,4 @@
 #include "EulerCalc.h"
-
 double f(double x, double y)
 {
 	double ans = y - x * x;
@@ -29,5 +28,20 @@ std::vector<std::pair<double, double> > Calculate(double l, double r, int n, dou
 	}
 	
 	return xy;
+}
+pair<double, double> difference(vector<pair<double, double> >&correct, vector<pair<double, double> >&approximate)
+{
+	double ans_abs = 0;
+	double ans_rel = 0;
+	
+	for(size_t i = 0; i < correct.size(); i++)
+	{
+		double diff = fabs(correct[i].second - approximate[i].second);
+		
+		if(diff - ans_abs > 0)ans_abs = diff;
+		if(diff / correct[i].second - ans_rel > 0)ans_rel = diff / correct[i].second;
+	}
+	
+	return make_pair(ans_abs, ans_rel);
 }
 

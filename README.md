@@ -50,6 +50,20 @@ The graph below represents the exact solution provided by Wolfram Alpha.
 
 ![Wolfram Graph](./assets/images/GraphDSolve.png)
 
+## Error Analysis: Euler Method vs. Wolfram Results
+
+In this section, we analyze the accuracy of the Euler method by comparing its results with those obtained from Wolfram Alpha. We calculate both the absolute and relative errors to quantify the discrepancies between the two methods.
+
+### Results
+
+- **Absolute Error:** \(0.0305143\)
+
+  The absolute error represents the difference between the actual value obtained from Wolfram and the approximate value calculated using the Euler method. It provides a straightforward measure of the deviation in the results.
+
+- **Relative Error:** \(0.00395351\)
+
+  The relative error is defined as the absolute error divided by the true value (Wolfram result). This metric gives us a sense of the error relative to the magnitude of the true value, making it easier to assess the performance of the Euler method in different contexts.
+
 ## Conclusion
 
-By comparing the two graphs, we can analyze the accuracy of the Euler method in approximating the solution to the ODE. The differences in the graphs highlight the method's effectiveness and its limitations in capturing the exact behavior of the solution.
+The analysis of these errors indicates that while the Euler method provides a reasonably close approximation to the true solution, the absolute error suggests some deviation that might need further investigation. The relatively low value of the relative error indicates that the Euler method performs well in this instance, but continued refinement and validation against more precise methods may enhance its accuracy further.
