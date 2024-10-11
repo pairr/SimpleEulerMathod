@@ -21,9 +21,7 @@ we aim to approximate the solution over the interval $[x_0, x_n]$ using the Eule
 The Euler method is a simple numerical technique that provides an iterative solution to the ODE. The main idea is to use the slope at the beginning of an interval to estimate the function's value at the next point.
 
 1. **Discretize the interval:** Divide the interval $[x_0, x_n]$ into $n$ equal subintervals of width $h$, where:
-   $$ 
-   h = \frac{x_n - x_0}{n}.
-   $$
+   $$h = \frac{x_n - x_0}{n}.$$
 
 2. **Iteration Formula:** The iterative formula for the Euler method is given by:
    $$
