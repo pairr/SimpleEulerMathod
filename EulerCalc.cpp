@@ -10,17 +10,16 @@ std::vector<std::pair<double, double> > Calculate(double l, double r, int n, dou
 {
 	double h = (r - l) / n;
 	
-	std::vector<std::pair<double, double> >xy(n);
+	std::vector<std::pair<double, double> >xy(n + 1);
 	
-	int j = 0;
-	for(double i = l; i < r; i += h)
+	for(int i = 0; i < n + 1; i++)
 	{
-		xy[j++].first = i;
+		xy[i].first = h * i;
 	}
 	
 	xy[0].second = y0;
 	
-	for(int i = 1; i < n; i++)
+	for(int i = 1; i <= n; i++)
 	{
 		double prevx, prevy;
 		prevx = xy[i - 1].first;
